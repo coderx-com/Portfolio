@@ -220,6 +220,83 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Added projects: detailed case studies -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Pricing &amp; Regional Trends in Airbnb Markets</h3>
+                        <p>
+                            Designed and deployed a scalable Apache Spark ETL pipeline to ingest, clean and normalize
+                            millions of daily listing and calendar records from the Inside Airbnb dataset. After
+                            handling messy price strings and missing values, we log‑transformed skewed price and
+                            occupancy variables and engineered features for location, room type, bedrooms/bathrooms and
+                            amenities. These factors are known to drive Airbnb prices, so we joined them with daily
+                            demand data and fit log–log regression models to estimate price elasticity and demand
+                            drivers across boroughs and regions. Location explained roughly 11–25&nbsp;% of price
+                            variability, with East Coast markets exhibiting higher average prices but lower variance.
+                            Demand elasticities were consistently negative, indicating bookings decline as price rises.
+                            Scaling the pipeline from a single node to a multi‑worker Spark cluster delivered
+                            roughly an 80&nbsp;% reduction in runtime.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Apache&nbsp;Spark</span>
+                            <span class="tech-tag">Regression</span>
+                            <span class="tech-tag">Big&nbsp;Data</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Cloud‑Based Image Sharing Platform</h3>
+                        <p>
+                            Built a cloud‑native image‑sharing platform using Python and Docker and orchestrated
+                            entirely with Azure services. The backend combines Azure SQL/SQL Server for authentication,
+                            Cosmos DB for metadata, Blob Storage for raw image binaries and Table Storage for audit
+                            logs. Serverless Azure Functions run statelessly on demand and integrate with Cosmos DB
+                            change‑feed triggers to implement an event‑driven pipeline for asynchronous image
+                            ingestion, metadata enrichment and MLOps tasks. When a new photo is uploaded, a
+                            queue‑based microservice sanitizes, resizes and classifies the image before persisting
+                            results back to Cosmos DB. Secrets and configuration are securely managed via Azure Key
+                            Vault. The containerized application runs on Azure App Service and Azure Functions,
+                            scaling gracefully under load while maintaining low latency and cost efficiency.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Serverless</span>
+                            <span class="tech-tag">Cosmos&nbsp;DB</span>
+                            <span class="tech-tag">MLOps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Ferrari F1 Pit‑Stop &amp; Lap‑Time Forecasting</h3>
+                        <p>
+                            Developed a time‑series forecasting framework in R to model Ferrari Formula&nbsp;1 pit‑stop
+                            durations and lap times across multiple races. The project began with exploratory data
+                            analysis and stationarity testing, using differencing and log transformations to stabilize
+                            mean and variance. We generated autocorrelation (ACF) and partial autocorrelation (PACF)
+                            plots to identify candidate AR and MA orders and employed auto.arima to select the
+                            optimal seasonal ARIMA model based on AIC/BIC criteria. Models were validated through
+                            k‑fold cross‑validation and residual diagnostics to ensure no remaining autocorrelation.
+                            The resulting SARIMA models captured seasonal patterns, delivering accurate race‑level
+                            forecasts evaluated via RMSE and MAE. These insights informed pit‑stop strategy and
+                            lap‑time planning, and the pipeline can be extended to incorporate exogenous factors such
+                            as tire wear or weather conditions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Time‑Series&nbsp;Analysis</span>
+                            <span class="tech-tag">ARIMA/SARIMA</span>
+                            <span class="tech-tag">Forecasting</span>
+                            <span class="tech-tag">ACF/PACF</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -290,7 +367,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
