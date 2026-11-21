@@ -485,7 +485,7 @@ transition:all .6s ease;
    EDUCATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .edu-row{
-  display:grid;grid-template-columns:1fr 1fr;
+  display:grid;grid-template-columns:repeat(3,1fr); /* CHANGED: was 1fr 1fr */
   border-bottom:1px solid var(--border);
 }
 .edu-card{
